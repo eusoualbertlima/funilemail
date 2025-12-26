@@ -34,6 +34,8 @@ Landing page simples para o produto "Funil Email Corretores".
 - [ ] Checar Open Graph com o Facebook Debugger e Twitter Card Validator
 - [ ] Testar em mobile: CTA fixo e layout responsivo
 - [ ] Validar formulário de captura (modal) e evento `lead_submitted` no GA
+- [ ] Verificar `og-image.png` (compatibilidade com redes sociais)
+- [ ] Revisar A/B variants (localStorage) e monitoramento no GA (evento `ab_test_assigned`)
 
 ---
 
