@@ -1,0 +1,16 @@
+name: Accessibility Checks
+
+on:
+  pull_request:
+
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run axe accessibility scan
+        uses: dequelabs/axe-action@v1
+        with:
+          url: https://eusoualbertlima.github.io/funilemail/

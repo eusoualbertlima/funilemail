@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eusoualbertlima.github.io/funilemail/sitemap.xml
