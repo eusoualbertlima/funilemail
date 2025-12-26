@@ -27,6 +27,19 @@ Landing page simples para o produto "Funil Email Corretores".
 
 > Observação: o Measurement ID não é um segredo e pode ser adicionado diretamente ao HTML; se preferir automações, crie um secret `GA_MEASUREMENT_ID` e eu posso adicionar um workflow para injetar o ID durante um deploy (opcional).
 
+## Protegendo a branch `main`
+
+Recomendo proteger a branch `main` após revisar PRs. Passos:
+
+1. Vá em Settings → Branches → Add rule → `main`.
+2. Marque:
+   - "Require pull request reviews before merging" (1+ approvals)
+   - "Require status checks to pass before merging" e selecione **Lighthouse CI** e **Accessibility Checks** (quando disponíveis)
+   - "Include administrators" / "Enforce for administrators"
+   - Bloquear force pushes / allow deletions desmarcado
+
+Essas regras impedem merges diretos e garantem qualidade via CI.
+
 ## QA Checklist (rápido)
 
 - [ ] Testar foco por teclado (Tab) e verificar visibilidade do "Pular para o conteúdo" e estados de foco nos CTAs.
