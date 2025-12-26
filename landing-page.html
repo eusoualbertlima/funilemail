@@ -173,6 +173,11 @@
 
         .hero-graphic img, .hero-graphic picture, .hero-img { width:100%; height:auto; display:block; border-radius:18px; }
 
+        .hero-graphic { max-width: 1100px; margin: 20px auto; }
+
+        .hero-sub { margin-top: 18px; color: var(--text-secondary); }
+        .hero-cta-wrap { margin-top: 18px; }
+
         @media (max-width: 768px) {
             .hero-graphic { max-height: 360px; overflow: hidden; }
             .cta-button { padding: 18px 28px; font-size: 18px; }
@@ -512,16 +517,16 @@
                 <div class="badge" aria-hidden="true">🚀 Novo v2.1</div>
                 <h1 id="hero-title">Corretor: <span>Pare de Perder Vendas</span> por Falta de Follow-up</h1>
 
-                <div class="hero-graphic" style="max-width:1100px;margin:20px auto;">
+                <div class="hero-graphic">
                   <picture>
                     <source type="image/webp" srcset="/assets/hero-360.webp 360w, /assets/hero-720.webp 720w, /assets/hero-1200.webp 1200w" sizes="(max-width:768px) 360px, (max-width:1200px) 720px, 1200px">
                     <img src="/assets/hero-720.png" alt="Dashboard do Funil Email Corretores — visual de KPIs e CTA" class="hero-img" loading="lazy" width="1200" height="600">
                   </picture>
     </div>
 
-    <p style="margin-top:18px">Sistema de emails automáticos que acompanha seus leads 24h por dia. Sem mensalidade. Usa seu próprio Gmail.</p>
+    <p class="hero-sub">Sistema de emails automáticos que acompanha seus leads 24h por dia. Sem mensalidade. Usa seu próprio Gmail.</p>
 
-    <div style="margin-top:18px">
+    <div class="hero-cta-wrap">
       <a href="https://pay.kiwify.com.br/ml13JYJ" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Automatizar Agora — R$147">AUTOMATIZAR AGORA — R$147</a>
     </div>
 
@@ -699,8 +704,7 @@
     <footer>
         <div class="container">
             <p>Funil Email Corretores v2.1 • <a href="https://instagram.com/eusoualbertlima" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Albert Lima">Albert Lima — Instagram: @eusoualbertlima</a></p>
-            <p style="margin-top: 10px;">Duvidas? <a href="https://wa.me/5562993824952" target="_blank"
-                    rel="noopener noreferrer">WhatsApp: (62) 99382-4952</a></p>
+            <p class="footer-help">Duvidas? <a href="https://wa.me/5562993824952" target="_blank" rel="noopener noreferrer">WhatsApp: (62) 99382-4952</a></p>
         </div>
     </footer>
 
