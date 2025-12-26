@@ -419,16 +419,23 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--bg);
+  background: linear-gradient(135deg, rgba(15,15,35,0.95), rgba(26,37,64,0.95));
   padding: 16px 20px;
   border-top: 1px solid var(--border);
   z-index: 100;
 }
 
 .mobile-cta .cta-button {
-  padding: 16px;
+  padding: 12px 16px;
   font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
 }
+
+/* Subscribe modal basic styles */
+#subscribe-modal { position: fixed; inset: 0; display: none; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; }
+#subscribe-modal > div { max-width: 520px; width: calc(100% - 40px); }
 
 @media (max-width: 768px) {
   .mobile-cta {
@@ -439,6 +446,10 @@ body {
     padding-bottom: 120px;
   }
 }
+
+/* subtle testimonial animation */
+.testimonial { transform: translateY(0); transition: transform 270ms ease, box-shadow 270ms ease; }
+.testimonial:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.4); }
 
 /* Utility: visually hidden text */
 .visually-hidden {
