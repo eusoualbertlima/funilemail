@@ -126,10 +126,12 @@ body {
 
 .hero-ctas { display:flex; gap:12px; align-items:center; margin-bottom: 8px; }
 .cta-primary { padding: 16px 28px; }
-.cta-link { color: var(--text-secondary); text-decoration: underline; font-size: 15px; }
+.cta-link { color: var(--text-secondary); text-decoration: underline; font-size: 15px; display:none; } /* hide secondary links to keep focus on buying */
 
 /* Social proof & Testimonials */
 .social-proof { padding: 36px 0; }
+.social-proof .proof-top { display:flex; gap:16px; align-items:center; justify-content:space-between; }
+.social-proof h2 { margin-top: 18px; }
 .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
 .testimonial { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; border-radius: 12px; color: var(--text);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
@@ -137,10 +139,32 @@ body {
 .testimonial p { font-size: 14px; color: var(--text); margin-bottom: 10px; }
 .testimonial cite { font-size: 13px; color: var(--text-secondary); }
 
+/* Footer spacing */
+.footer p + p { margin-top: 10px; }
+
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-illustration { order: -1; margin-bottom: 18px; }
   .testimonials { grid-template-columns: 1fr; }
+
+  /* Stack CTAs and make primary buttons full-width on narrow screens */
+  .hero-ctas { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+  .hero-ctas .cta-button { width: 100%; padding: 14px 16px; text-align: center; }
+
+  /* Hide secondary links and keep focus on conversion */
+  .hero-ctas .cta-link { display: none; }
+}
+
+/* Extra small screens */
+@media (max-width: 420px) {
+  /* Hide hero illustration to prioritize content and speed */
+  .hero-illustration { display: none; }
+
+  /* Simplify header to keep only primary CTA visible */
+  .nav-list { gap: 8px; }
+  .nav-list .nav-link { display: none; }
+  .nav-cta { padding: 10px 12px; font-size: 14px; }
+  .brand strong { font-size: 18px; }
 }
 
 /* Mobile sticky CTA adjustments */
@@ -353,9 +377,13 @@ body {
   box-shadow: 0 6px 30px rgba(245, 158, 11, 0.4);
 }
 
-/* Focus states for accessibility */
-.cta-button:focus,
-.nav-link:focus,
+/* Make price card CTA full-width and prominent on mobile */
+.price-card .cta-button { display: block; width: 100%; padding: 16px; margin-top: 18px; font-size: 18px; text-align: center; }
+
+/* Ensure buttons in hero and price don't overflow */
+@media (max-width: 768px) {
+  .hero-ctas .cta-button, .price-card .cta-button { font-size: 16px; padding: 14px; }
+}
 .nav-cta:focus {
   outline: 3px solid rgba(245, 158, 11, 0.5);
   outline-offset: 2px;

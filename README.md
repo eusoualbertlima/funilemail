@@ -60,7 +60,7 @@ Se quiser, eu abro um PR com estes commits e separo por categoria (A11y / SEO / 
 
 - Novo hero com CTA primário destacado, subtítulo (lead) e ilustração SVG (`banner.svg`).
 - Seção de prova social com depoimentos para aumentar conversões.
-- Páginas de `tutorial.html` e `guia.html` adicionadas (esqueleto para documentação/instruções).
+- Páginas de `tutorial.html` e `guia.html` (removidas dos links da página principal para manter o foco em vendas).
 - A/B testing cliente (simples) adicionado: `ab.js` escolhe variação A/B e envia evento para `dataLayer`/`gtag` se presente.
 - Modal de captura (acessível) adicionado: `subscribe.js` salva emails no `localStorage` e dispara evento `lead_submitted`.
 - Preload de fonte e `theme-color` adicionados para melhorar LCP e sensação mobile.
