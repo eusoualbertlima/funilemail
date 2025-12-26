@@ -1,0 +1,31 @@
+name: Generate OG Image
+
+on:
+  push:
+    branches: [ main, design-redesign ]
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Render OG PNG
+        run: npm run render-og
+
+      - name: Commit OG image if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add og-image.png || true
+          git diff --quiet --staged || (git commit -m "chore: generate og-image.png" && git push)
