@@ -130,12 +130,17 @@ body {
 
 /* Social proof & Testimonials */
 .social-proof { padding: 36px 0; }
+.social-proof .proof-top { display:flex; gap:16px; align-items:center; justify-content:space-between; }
+.social-proof h2 { margin-top: 18px; }
 .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
 .testimonial { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; border-radius: 12px; color: var(--text);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 .testimonial p { font-size: 14px; color: var(--text); margin-bottom: 10px; }
 .testimonial cite { font-size: 13px; color: var(--text-secondary); }
+
+/* Footer spacing */
+.footer p + p { margin-top: 10px; }
 
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
