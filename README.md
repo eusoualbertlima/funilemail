@@ -23,6 +23,7 @@ Este repositório contém um script para gerar versões WebP/PNG responsivas a p
 ## Próximos passos recomendados
 
 - Adicionar uma imagem real para `og:image` e `favicon.ico` na raiz do projeto (ou usar o workflow `Generate OG Image` que cria `og-image.png` automaticamente a partir do `og-image-2.svg`).
+- Workflow do Lighthouse CI adicionado (`.github/workflows/lighthouse.yml`) para rodar auditorias de Performance/A11y/SEO automaticamente em PRs/Push (usa `@lhci/cli`).
 - Integrar analytics (GA4) e tracking de conversões (adicionado: script que dispara evento `purchase` ao clicar no CTA). Para ativar, adicione seu Measurement ID (G-XXXXXXX) em `<meta name="ga-measurement-id" content="G-XXXXXXX">` no `index.html` ou `landing-page.html`. O script `assets/ga.js` será carregado automaticamente quando o ID estiver presente.
 - Adicionar testes automatizados (Lighthouse/Cypress) para verificar regressões de acessibilidade e performance.
 
