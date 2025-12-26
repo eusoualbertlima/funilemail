@@ -1,0 +1,38 @@
+name: PR checks — HTML & Accessibility
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install html-validate and http-server + pa11y
+        run: |
+          npm install --no-save html-validate http-server pa11y
+
+      - name: Validate HTML files
+        run: |
+          npx html-validate "**/*.html"
+
+      - name: Start local static server
+        run: |
+          npx http-server -p 8080 -c-1 &
+          sleep 2
+
+      - name: Accessibility scan with Pa11y
+        run: |
+          npx pa11y http://localhost:8080/ --wait 2000 || true
+
+      - name: Output summary
+        run: |
+          echo "HTML validation and accessibility scan finished. See logs for details."
