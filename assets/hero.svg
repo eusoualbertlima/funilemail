@@ -41,28 +41,8 @@
   <path d="M-60 170 C 280 40, 560 260, 900 150 S 1520 100, 1500 30"
         fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="3"/>
 
-  <!-- Badge NOVO v2.1 -->
-  <g transform="translate(120,110)">
-    <rect x="0" y="0" rx="18" ry="18" width="120" height="34" fill="url(#amber)"/>
-    <text x="60" y="23" text-anchor="middle" class="badgeTxt">🚀 NOVO v2.1</text>
-  </g>
-
-  <!-- Headline -->
-  <text x="120" y="200" class="title">Pare de Perder Vendas —</text>
-  <text x="120" y="270" class="title">Automatize o Follow-up</text>
-  <text x="120" y="340" class="title">e Feche Mais Clientes</text>
-
-  <!-- Sub -->
-  <text x="120" y="395" class="subtitle">7 emails prontos • Setup em 10 minutos • Sem mensalidade</text>
-
-  <!-- CTA -->
-  <g transform="translate(120,430)" filter="url(#shadow)">
-    <rect x="0" y="0" rx="18" ry="18" width="380" height="64" fill="url(#amber)"/>
-    <text x="190" y="42" text-anchor="middle" class="ctaTxt">AUTOMATIZAR AGORA — R$147</text>
-  </g>
-
-  <!-- Tiny line -->
-  <text x="120" y="520" class="small">🔒 Garantia de 7 dias • Pagamento único • Oferta por tempo limitado</text>
+  <!-- Removed badge/headline/sub/cta from SVG to avoid duplicating page copy. The illustration keeps only the dashboard card. -->
+  <!-- (Text removed to prevent duplication with HTML headings) -->
 
   <!-- Right card: Dashboard -->
   <g transform="translate(835,140)" filter="url(#shadow)">
