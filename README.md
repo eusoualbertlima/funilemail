@@ -23,3 +23,11 @@ Landing page simples para o produto "Funil Email Corretores".
 ---
 
 Se quiser, eu abro um PR com estes commits e separo por categoria (A11y / SEO / UI).
+
+## Design & Conversão
+
+- Novo hero com CTA primário destacado, subtítulo (lead) e ilustração SVG (`banner.svg`).
+- Seção de prova social com depoimentos para aumentar conversões.
+- Páginas de `tutorial.html` e `guia.html` adicionadas (esqueleto para documentação/instruções).
+
+---
