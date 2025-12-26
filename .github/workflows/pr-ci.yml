@@ -22,7 +22,8 @@ jobs:
 
       - name: Validate HTML files
         run: |
-          npx html-validate "**/*.html"
+          # Validate the primary landing page only to avoid scanning node_modules/test artifacts
+          npx html-validate "index.html"
 
       - name: Start local static server
         run: |
