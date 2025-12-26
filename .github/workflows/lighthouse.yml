@@ -1,0 +1,27 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install tools
+        run: npm install -g http-server @lhci/cli
+
+      - name: Serve site
+        run: npx http-server -p 8080 ./ -c-1 &
+
+      - name: Run Lighthouse CI
+        run: npx lhci autorun --upload.target=temporary-public-storage --assert.performance=70 --assert.accessibility=90 --assert.seo=90
