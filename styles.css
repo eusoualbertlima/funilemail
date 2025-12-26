@@ -126,7 +126,7 @@ body {
 
 .hero-ctas { display:flex; gap:12px; align-items:center; margin-bottom: 8px; }
 .cta-primary { padding: 16px 28px; }
-.cta-link { color: var(--text-secondary); text-decoration: underline; font-size: 15px; }
+.cta-link { color: var(--text-secondary); text-decoration: underline; font-size: 15px; display:none; } /* hide secondary links to keep focus on buying */
 
 /* Social proof & Testimonials */
 .social-proof { padding: 36px 0; }
