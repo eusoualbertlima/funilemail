@@ -1,24 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="660" viewBox="0 0 880 660">
-  <rect width="100%" height="100%" fill="#f6f7fb" rx="16" />
-  <rect x="20" y="20" width="200" height="40" rx="6" fill="#ffffff" stroke="#e6e9f2" />
-  <g transform="translate(24,32)">
-    <text x="0" y="18" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1f2937">Funil Email</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="680" viewBox="0 0 600 680" role="img" aria-label="Menu completo do Funil Email Corretores">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <style>
+      .bg{fill:#ffffff}
+      .sep{stroke:#e9e9ef; stroke-width:2}
+      .txt{font: 600 26px/1.2 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#222}
+      .iconStroke{stroke:#1f2937; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- Card -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="20" width="560" height="640" rx="14" class="bg"/>
+    <rect x="20" y="20" width="560" height="640" rx="14" fill="none" stroke="#e6e6ee"/>
   </g>
-  <rect x="20" y="80" width="840" height="520" rx="12" fill="#0f1724" />
-  <g fill="#cbd5e1">
-    <rect x="40" y="100" width="160" height="32" rx="6" />
-    <rect x="40" y="144" width="240" height="24" rx="6" />
 
-    <rect x="220" y="100" width="520" height="20" rx="6" />
-    <rect x="220" y="132" width="460" height="20" rx="6" />
-    <rect x="220" y="164" width="380" height="20" rx="6" />
+  <!-- Helpers: left padding 42, icon 30x30, text x=92 -->
+  <!-- Row 1: Configurar Planilha -->
+  <g transform="translate(42,64)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#f3f4f6" stroke="#e5e7eb"/>
+      <path d="M10 8 H20 M10 13 H22 M10 18 H18" class="iconStroke" opacity="0.9"/>
+    </g>
+    <text x="50" y="10" class="txt">Configurar Planilha</text>
+  </g>
+  <line x1="30" y1="94" x2="570" y2="94" class="sep"/>
+
+  <!-- Row 2: Atualizar Sistema -->
+  <g transform="translate(42,132)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#eef6ff" stroke="#dbeafe"/>
+      <path d="M21 10 A8 8 0 1 0 23 18" fill="none" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M23 10 V16 H17" fill="none" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Atualizar Sistema</text>
+  </g>
+  <line x1="30" y1="162" x2="570" y2="162" class="sep"/>
+
+  <!-- Row 3: Enviar Email para Lead -->
+  <g transform="translate(42,220)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#fff7ed" stroke="#ffedd5"/>
+      <path d="M6 10 H24 V22 H6 Z" fill="none" stroke="#f59e0b" stroke-width="2.8" stroke-linejoin="round"/>
+      <path d="M6 11 L15 17 L24 11" fill="none" stroke="#f59e0b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Enviar Email para Lead</text>
+  </g>
+  <line x1="30" y1="250" x2="570" y2="250" class="sep"/>
+
+  <!-- Row 4: Enviar em Massa -->
+  <g transform="translate(42,288)">
+    <g transform="translate(0,-18)">
+      <rect x="3" y="4" width="24" height="22" rx="5" fill="#f3f4f6" stroke="#e5e7eb"/>
+      <rect x="0" y="1" width="24" height="22" rx="5" fill="#ffffff" stroke="#d1d5db"/>
+      <path d="M7 9 H18 M7 14 H20" class="iconStroke" opacity="0.9"/>
+    </g>
+    <text x="50" y="10" class="txt">Enviar em Massa (Leads Ativos)</text>
   </g>
 
-  <text x="40" y="60" font-family="Inter, Arial, sans-serif" font-size="18" fill="#0f1724" font-weight="700">Menu / Painel</text>
+  <!-- Big divider like screenshot spacing -->
+  <line x1="30" y1="328" x2="570" y2="328" class="sep"/>
 
-  <rect x="40" y="340" width="360" height="150" rx="8" fill="#091627" />
-  <g fill="#9aa7b7">
-    <rect x="56" y="364" width="86" height="14" rx="6" />
-    <rect x="56" y="388" width="120" height="12" rx="6" />
+  <!-- Row 5: Emails Sazonais (with arrow) -->
+  <g transform="translate(42,366)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#f5f3ff" stroke="#ede9fe"/>
+      <path d="M9 21 L20 10" fill="none" stroke="#7c3aed" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M8 16 L14 22 L22 14 L16 8 Z" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M22 8 L25 6 M23 12 L27 12 M20 6 L20 3" fill="none" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Emails Sazonais</text>
+    <path d="M0 0 L18 14 L0 28" transform="translate(516,-24)" fill="none" stroke="#6b7280" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Row 6: Enviar Oportunidade de Imóvel -->
+  <g transform="translate(42,434)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#ecfeff" stroke="#cffafe"/>
+      <path d="M7 14 L15 8 L23 14" fill="none" stroke="#0891b2" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 14 V23 H21 V14" fill="none" stroke="#0891b2" stroke-width="2.8" stroke-linejoin="round"/>
+      <rect x="13" y="18" width="4" height="5" rx="1.2" fill="#0891b2"/>
+    </g>
+    <text x="50" y="10" class="txt">Enviar Oportunidade de Imóvel</text>
+  </g>
+
+  <line x1="30" y1="464" x2="570" y2="464" class="sep"/>
+
+  <!-- Row 7: Dashboard Visual -->
+  <g transform="translate(42,502)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#f0fdf4" stroke="#dcfce7"/>
+      <path d="M8 22 V14 M14 22 V10 M20 22 V16" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M7 22 H23" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Dashboard Visual</text>
+  </g>
+  <line x1="30" y1="532" x2="570" y2="532" class="sep"/>
+
+  <!-- Row 8: Ver Estatísticas -->
+  <g transform="translate(42,570)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#fff1f2" stroke="#ffe4e6"/>
+      <path d="M8 22 L12 16 L16 18 L22 10" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 22 H23" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Ver Estatísticas</text>
+  </g>
+  <line x1="30" y1="600" x2="570" y2="600" class="sep"/>
+
+  <!-- Row 9: Ativar Envio Automático -->
+  <g transform="translate(42,638)">
+    <g transform="translate(0,-18)">
+      <rect x="0" y="0" width="30" height="30" rx="6" fill="#fffbeb" stroke="#fef3c7"/>
+      <path d="M16 6 L10 18 H16 L14 26 L22 14 H16 Z" fill="none" stroke="#f59e0b" stroke-width="2.8" stroke-linejoin="round"/>
+    </g>
+    <text x="50" y="10" class="txt">Ativar Envio Automático</text>
   </g>
 </svg>
