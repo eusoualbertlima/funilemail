@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Funil Email Corretores — Automatize seu Follow-up">
   <meta property="og:description" content="Sistema de emails automáticos para corretores. 7 emails prontos, R$0 de mensalidade.">
-  <meta property="og:image" content="/og-image.svg">
+  <meta property="og:image" content="/og-image.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://seusite.com">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,11 @@
   </script>
 
   <!-- Fonts -->
+  <!-- Preload font for faster LCP -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/xxxxxxxx.woff2" as="font" type="font/woff2" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0f0f23">
 </head>
 
 <body>
@@ -46,11 +49,25 @@
 
   <main id="main-content">
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="badge" aria-hidden="true">🚀 Novo v2.1</div>
-        <h1>Corretor: <span>Pare de Perder Vendas</span> por Falta de Follow-up</h1>
-        <p>Sistema de emails automáticos que acompanha seus leads 24h por dia. Sem mensalidade. Usa seu próprio Gmail.</p>
+    <section class="hero hero-grid">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="badge" aria-hidden="true">🚀 Novo v2.1</div>
+          <h1>Corretor: <span>Pare de Perder Vendas</span> por Falta de Follow-up</h1>
+          <p class="lead">Automatize seu follow-up com 7 emails prontos. Sem mensalidade — usa seu próprio Gmail.</p>
+
+          <div class="hero-ctas">
+            <a class="cta-button cta-primary" href="https://pay.kiwify.com.br/ml13JYJ" target="_blank" rel="noopener noreferrer" aria-label="Comprar agora">Quero Automatizar</a>
+            <a class="cta-link" href="tutorial.html">Ver tutorial</a>
+            <a class="cta-link" href="#" data-open-subscribe>Quero receber novidades</a>
+          </div>
+
+          <p class="guarantee small">🔒 <strong>Garantia de 7 dias</strong> • Pagamento único R$147</p>
+        </div>
+
+        <div class="hero-illustration" aria-hidden="true">
+          <img src="banner.svg" alt="Banner Funil Email Corretores" width="520" height="320">
+        </div>
       </div>
     </section>
 
@@ -114,6 +131,35 @@
               <p>Divulgue um imóvel para toda sua lista com 1 clique.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="social-proof">
+      <div class="container">
+        <div class="proof-top" style="display:flex;gap:16px;align-items:center;justify-content:space-between;">
+          <div class="stats">+ <strong>200</strong> corretores usando</div>
+          <div class="rating">⭐ 4.9 (baseado em clientes)</div>
+        </div>
+
+        <h2 style="margin-top:18px;">O que corretores dizem</h2>
+
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <p>"Recuperei leads que tinham sumido — fechei 3 vendas no primeiro mês."</p>
+            <cite>- João, Corretor em Goiânia</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>"Instalei em 10 minutos, e já senti a diferença no pipeline."</p>
+            <cite>- Marina, Corretora em Brasília</cite>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>"Ótimo custo-benefício. Sem mensalidade e fácil de usar."</p>
+            <cite>- Carlos, Autônomo</cite>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -224,6 +270,23 @@
     <a href="https://pay.kiwify.com.br/ml13JYJ" class="cta-button" target="_blank" rel="noopener noreferrer">Quero Automatizar Agora</a>
   </div>
 
+  <!-- Subscribe Modal (accessible) -->
+  <div id="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-title" style="display:none;">
+    <div style="max-width:520px;margin:40px auto;background:var(--bg-card);border-radius:12px;padding:20px;border:1px solid var(--border);">
+      <button aria-label="Fechar" data-close style="float:right;background:none;border:0;color:var(--text-secondary);font-size:18px;">✕</button>
+      <h2 id="subscribe-title">Receba novidades</h2>
+      <p>Cadastre seu email para receber atualizações e bônus.</p>
+      <form>
+        <label for="subscribe-email" class="visually-hidden">Email</label>
+        <input id="subscribe-email" type="email" placeholder="seu@email.com" required style="width:100%;padding:12px;border-radius:8px;border:1px solid var(--border);margin-bottom:12px;background:transparent;color:var(--text);">
+        <button class="cta-button" type="submit">Quero receber</button>
+      </form>
+      <p class="subscribe-message" style="margin-top:12px;color:var(--text-secondary)"></p>
+    </div>
+  </div>
+
+  <script src="ab.js" defer></script>
+  <script src="subscribe.js" defer></script>
 </body>
 
 </html>

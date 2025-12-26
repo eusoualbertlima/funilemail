@@ -78,13 +78,19 @@ body {
   border-radius: 8px;
 }
 
-/* Hero Section */
-.hero {
-  padding: 60px 0 40px;
-  text-align: center;
+/* Hero Section (redesign) */
+.hero.hero-grid {
+  padding: 48px 0 24px;
 }
 
-.badge {
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-content .badge {
   display: inline-block;
   background: var(--accent);
   color: #000;
@@ -96,22 +102,51 @@ body {
   margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: clamp(28px, 6vw, 48px);
+.hero-content h1 {
+  font-size: clamp(28px, 5.2vw, 44px);
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
-.hero h1 span {
-  color: var(--accent);
-}
+.hero-content h1 span { color: var(--accent); }
 
-.hero p {
+.lead {
   font-size: 18px;
   color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 30px;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+.hero-illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.hero-ctas { display:flex; gap:12px; align-items:center; margin-bottom: 8px; }
+.cta-primary { padding: 16px 28px; }
+.cta-link { color: var(--text-secondary); text-decoration: underline; font-size: 15px; }
+
+/* Social proof & Testimonials */
+.social-proof { padding: 36px 0; }
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.testimonial { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; border-radius: 12px; color: var(--text);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.testimonial p { font-size: 14px; color: var(--text); margin-bottom: 10px; }
+.testimonial cite { font-size: 13px; color: var(--text-secondary); }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-illustration { order: -1; margin-bottom: 18px; }
+  .testimonials { grid-template-columns: 1fr; }
+}
+
+/* Mobile sticky CTA adjustments */
+@media (max-width: 768px) {
+  .mobile-cta { display: block; position: fixed; bottom: 0; left: 0; right: 0; padding: 12px 16px; box-shadow: 0 -6px 18px rgba(0,0,0,0.35); }
+  .mobile-cta .cta-button { width: 100%; padding: 14px; font-size: 16px; }
 }
 
 /* Problem Section */
@@ -384,16 +419,23 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--bg);
+  background: linear-gradient(135deg, rgba(15,15,35,0.95), rgba(26,37,64,0.95));
   padding: 16px 20px;
   border-top: 1px solid var(--border);
   z-index: 100;
 }
 
 .mobile-cta .cta-button {
-  padding: 16px;
+  padding: 12px 16px;
   font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
 }
+
+/* Subscribe modal basic styles */
+#subscribe-modal { position: fixed; inset: 0; display: none; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; }
+#subscribe-modal > div { max-width: 520px; width: calc(100% - 40px); }
 
 @media (max-width: 768px) {
   .mobile-cta {
@@ -404,6 +446,10 @@ body {
     padding-bottom: 120px;
   }
 }
+
+/* subtle testimonial animation */
+.testimonial { transform: translateY(0); transition: transform 270ms ease, box-shadow 270ms ease; }
+.testimonial:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.4); }
 
 /* Utility: visually hidden text */
 .visually-hidden {

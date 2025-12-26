@@ -1,0 +1,11 @@
+{
+  "name": "funilemail-static-tools",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render-og": "node scripts/render-og.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
+  }
+}
