@@ -9,20 +9,18 @@ const path = require('path');
 const sharp = require('sharp');
 
 const ASSETS_DIR = path.join(__dirname, '..', 'assets');
-const SOURCE_BASENAME = 'dashboard-menu';
 const WIDTHS = [360, 720, 1200];
 
 async function fileExists(p) {
   try { await fs.promises.access(p); return true; } catch (e) { return false; }
 }
 
-async function findSource() {
-  const exts = ['svg', 'png', 'jpg', 'jpeg', 'webp'];
-  for (const ext of exts) {
-    const p = path.join(ASSETS_DIR, `${SOURCE_BASENAME}.${ext}`);
-    if (await fileExists(p)) return p;
-  }
-  return null;
+// Find all image sources in assets with supported extensions (we process each base name found)
+async function listSources() {
+  const files = await fs.promises.readdir(ASSETS_DIR);
+  const exts = ['.svg', '.png', '.jpg', '.jpeg', '.webp'];
+  const sources = files.filter(f => exts.includes(path.extname(f).toLowerCase())).map(f => path.join(ASSETS_DIR, f));
+  return sources;
 }
 
 async function ensureDir(dir) {
@@ -31,37 +29,43 @@ async function ensureDir(dir) {
 
 (async function main(){
   await ensureDir(ASSETS_DIR);
-  const src = await findSource();
-  if (!src) {
-    console.error('No source image found. Place one of: dashboard-menu.svg|png|jpg|jpeg|webp in /assets and re-run.');
+  const sources = await listSources();
+  if (!sources || sources.length === 0) {
+    console.error('No source images found in /assets. Place svg/png/jpg/jpeg/webp files and re-run.');
     process.exit(1);
   }
 
-  const ext = path.extname(src).slice(1).toLowerCase();
-  const buffer = await fs.promises.readFile(src);
+  for (const src of sources) {
+    try {
+      const buffer = await fs.promises.readFile(src);
+      const base = path.basename(src, path.extname(src));
 
-  for (const w of WIDTHS) {
-    // WebP
-    const outWebp = path.join(ASSETS_DIR, `${SOURCE_BASENAME}-${w}.webp`);
-    await sharp(buffer)
-      .resize({ width: w })
-      .webp({ quality: 80 })
-      .toFile(outWebp);
-    console.log('Written', outWebp);
+      for (const w of WIDTHS) {
+        // WebP
+        const outWebp = path.join(ASSETS_DIR, `${base}-${w}.webp`);
+        await sharp(buffer)
+          .resize({ width: w })
+          .webp({ quality: 80 })
+          .toFile(outWebp);
+        console.log('Written', outWebp);
 
-    // PNG fallback
-    const outPng = path.join(ASSETS_DIR, `${SOURCE_BASENAME}-${w}.png`);
-    await sharp(buffer)
-      .resize({ width: w })
-      .png({ quality: 80, compressionLevel: 8 })
-      .toFile(outPng);
-    console.log('Written', outPng);
+        // PNG fallback
+        const outPng = path.join(ASSETS_DIR, `${base}-${w}.png`);
+        await sharp(buffer)
+          .resize({ width: w })
+          .png({ quality: 80, compressionLevel: 8 })
+          .toFile(outPng);
+        console.log('Written', outPng);
+      }
+
+      // Additionally create a large webp with original width if needed
+      const outWebpLarge = path.join(ASSETS_DIR, `${base}-orig.webp`);
+      await sharp(buffer).webp({ quality: 85 }).toFile(outWebpLarge);
+      console.log('Written', outWebpLarge);
+    } catch (err) {
+      console.error('Failed to process', src, err.message);
+    }
   }
-
-  // Additionally create a large webp with original width if needed
-  const outWebpLarge = path.join(ASSETS_DIR, `${SOURCE_BASENAME}-orig.webp`);
-  await sharp(buffer).webp({ quality: 85 }).toFile(outWebpLarge);
-  console.log('Written', outWebpLarge);
 
   console.log('Optimization complete');
 })();

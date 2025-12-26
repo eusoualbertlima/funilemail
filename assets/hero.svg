@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-label="Hero Funil Email Corretores">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0b1e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <style>
+      .title { font: 800 64px/1.1 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#fff; }
+      .subtitle { font: 500 22px/1.4 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#cbd5f5; }
+      .badgeTxt { font: 800 14px/1 Inter, system-ui; fill:#0b0b1e; }
+      .ctaTxt { font: 900 22px/1 Inter, system-ui; fill:#0b0b1e; letter-spacing:.4px; }
+      .small { font: 600 14px/1.2 Inter, system-ui; fill:#9ca3af; }
+      .uiH { font: 900 20px/1 Inter, system-ui; fill:#111827; }
+      .uiS { font: 700 14px/1 Inter, system-ui; }
+      .kpiLabel { font: 700 14px/1.2 Inter, system-ui; fill:#e5e7eb; opacity:.9; }
+      .cardTitle { font: 900 20px/1 Inter, system-ui; fill:#f59e0b; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="720" fill="url(#bg)"/>
+
+  <!-- Decorative lines -->
+  <path d="M-40 560 C 300 440, 560 700, 920 560 S 1520 520, 1480 360"
+        fill="none" stroke="#f59e0b" stroke-opacity="0.10" stroke-width="4"/>
+  <path d="M-60 170 C 280 40, 560 260, 900 150 S 1520 100, 1500 30"
+        fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="3"/>
+
+  <!-- Badge NOVO v2.1 -->
+  <g transform="translate(120,110)">
+    <rect x="0" y="0" rx="18" ry="18" width="120" height="34" fill="url(#amber)"/>
+    <text x="60" y="23" text-anchor="middle" class="badgeTxt">🚀 NOVO v2.1</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="120" y="200" class="title">Pare de Perder Vendas —</text>
+  <text x="120" y="270" class="title">Automatize o Follow-up</text>
+  <text x="120" y="340" class="title">e Feche Mais Clientes</text>
+
+  <!-- Sub -->
+  <text x="120" y="395" class="subtitle">7 emails prontos • Setup em 10 minutos • Sem mensalidade</text>
+
+  <!-- CTA -->
+  <g transform="translate(120,430)" filter="url(#shadow)">
+    <rect x="0" y="0" rx="18" ry="18" width="380" height="64" fill="url(#amber)"/>
+    <text x="190" y="42" text-anchor="middle" class="ctaTxt">AUTOMATIZAR AGORA — R$147</text>
+  </g>
+
+  <!-- Tiny line -->
+  <text x="120" y="520" class="small">🔒 Garantia de 7 dias • Pagamento único • Oferta por tempo limitado</text>
+
+  <!-- Right card: Dashboard -->
+  <g transform="translate(835,140)" filter="url(#shadow)">
+    <rect x="0" y="0" width="485" height="440" rx="26" fill="url(#card)"/>
+
+    <!-- Header -->
+    <text x="34" y="56" class="cardTitle">Dashboard do Funil</text>
+    <text x="34" y="84" class="kpiLabel">Acompanhe leads e conversões em tempo real</text>
+
+    <!-- Big KPI -->
+    <rect x="34" y="110" width="417" height="76" rx="16" fill="url(#amber)"/>
+    <text x="242.5" y="150" text-anchor="middle" font-family="Inter,system-ui" font-size="30" font-weight="900" fill="#0b0b1e">257</text>
+    <text x="242.5" y="173" text-anchor="middle" font-family="Inter,system-ui" font-size="14" font-weight="800" fill="#0b0b1e" opacity="0.9">Total de Leads</text>
+
+    <!-- KPI tiles -->
+    <g transform="translate(34,205)">
+      <rect x="0" y="0" width="200" height="96" rx="18" fill="#d1fae5"/>
+      <text x="20" y="44" class="uiH">113</text>
+      <text x="20" y="70" class="uiS" fill="#065f46">Leads Ativos</text>
+
+      <rect x="217" y="0" width="200" height="96" rx="18" fill="#e0f2fe"/>
+      <text x="237" y="44" class="uiH">38%</text>
+      <text x="237" y="70" class="uiS" fill="#075985">Taxa de Conversão</text>
+
+      <rect x="0" y="116" width="200" height="96" rx="18" fill="#ecfeff"/>
+      <text x="20" y="160" class="uiH">68</text>
+      <text x="20" y="186" class="uiS" fill="#0e7490">Convertidos</text>
+
+      <rect x="217" y="116" width="200" height="96" rx="18" fill="#fef3c7"/>
+      <text x="237" y="160" class="uiH">7</text>
+      <text x="237" y="186" class="uiS" fill="#92400e">Emails no Funil</text>
+    </g>
+
+    <!-- Footer hint -->
+    <g transform="translate(34,420)">
+      <rect x="0" y="-24" width="417" height="2" fill="#ffffff" opacity="0.06"/>
+      <text x="0" y="8" class="kpiLabel">Foco: velocidade + consistência no follow-up</text>
+    </g>
+  </g>
+</svg>
