@@ -14,6 +14,12 @@ Landing page simples para o produto "Funil Email Corretores".
 1. Abra o arquivo `index.html` no navegador (por exemplo, via Live Server ou abrindo o arquivo diretamente).
 2. Para testes de acessibilidade, pressione Tab para verificar os estados de foco e use a tecla para pular para o conteúdo com o link "Pular para o conteúdo".
 
+### Imagens responsivas
+
+Este repositório contém um script para gerar versões WebP/PNG responsivas a partir de SVGs e outras imagens em `assets/`.
+- Regenerar imagens: `npm run images` (gera `base-{width}.{webp|png}` e `base-orig.webp`).
+- O hero principal (`assets/hero.svg`) foi adicionado e agora há variantes `assets/hero-360.webp`, `assets/hero-720.webp`, `assets/hero-1200.webp` e fallbacks PNG.
+
 ## Próximos passos recomendados
 
 - Adicionar uma imagem real para `og:image` e `favicon.ico` na raiz do projeto (ou usar o workflow `Generate OG Image` que cria `og-image.png` automaticamente a partir do `og-image-2.svg`).
