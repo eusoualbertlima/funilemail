@@ -263,6 +263,21 @@ body {
   color: var(--text-secondary);
 }
 
+/* Screenshot styling inside feature blocks */
+.feature .screenshot { margin-top: 12px; }
+.feature .screenshot img {
+  max-width: 360px;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+  .feature .screenshot img { max-width: 100%; }
+}
+
 /* How it Works */
 .how-it-works {
   padding: 50px 0;
