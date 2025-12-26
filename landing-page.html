@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funil Email Corretores - Automatize seu Follow-up</title>
+    <meta name="description"
+        content="Sistema de emails automáticos para corretores de imóveis. 7 emails prontos, R$ 0 de mensalidade.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Funil Email Corretores - Automatize seu Follow-up">
+    <meta property="og:description"
+        content="Sistema de emails automáticos para corretores de imóveis. 7 emails prontos, R$ 0 de mensalidade.">
+    <meta property="og:image" content="https://chatgeniuns.com.br/og-funil-email.jpg">
+    <meta property="og:url" content="https://chatgeniuns.com.br/funil-email-corretores">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Funil Email Corretores - Automatize seu Follow-up">
+    <meta name="twitter:description"
+        content="Sistema de emails automáticos para corretores de imóveis. 7 emails prontos, R$ 0 de mensalidade.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Funil Email Corretores",
+        "description": "Sistema de emails automáticos para corretores de imóveis. 7 emails prontos, envio automático, R$ 0 de mensalidade.",
+        "brand": {
+            "@type": "Brand",
+            "name": "ChatGeniuns"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "price": "147.00",
+            "availability": "https://schema.org/InStock",
+            "url": "https://pay.kiwify.com.br/ml13JYJ"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0f0f23;
+            --bg-card: #1a1a2e;
+            --accent: #f59e0b;
+            --accent-hover: #d97706;
+            --success: #10b981;
+            --text: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 1000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .header-cta {
+            background: var(--accent);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .header-cta:hover,
+        .header-cta:focus {
+            background: var(--accent-hover);
+            outline: 2px solid var(--text);
+            outline-offset: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: var(--bg-card);
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .problem h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .problem-list li .icon {
+            color: #ef4444;
+            flex-shrink: 0;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 50px 0;
+        }
+
+        .solution h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .solution h2 span {
+            color: var(--accent);
+        }
+
+        .features {
+            display: grid;
+            gap: 16px;
+        }
+
+        .feature {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* How it Works */
+        .how-it-works {
+            padding: 50px 0;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+        }
+
+        .how-it-works h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .pricing .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .price-card {
+            background: linear-gradient(135deg, var(--bg-card), #252542);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .price-old {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .price-new {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        .price-new span {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .price-info {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .benefits-list li .icon {
+            color: var(--success);
+        }
+
+        .cta-button {
+            display: block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: #000;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(245, 158, 11, 0.4);
+        }
+
+        .cta-button:focus {
+            outline: 3px solid var(--text);
+            outline-offset: 3px;
+        }
+
+        .guarantee {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .guarantee strong {
+            color: var(--success);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 50px 0;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+        }
+
+        .faq h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
+        /* Mobile CTA Fixed */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            padding: 16px 20px;
+            border-top: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .mobile-cta .cta-button {
+            padding: 16px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta {
+                display: block;
+            }
+
+            .pricing {
+                padding-bottom: 120px;
+            }
+
+            .header-cta {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Skip Link for Accessibility -->
+    <a class="skip-link" href="#main-content">Pular para o conteudo</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Funil Email Corretores</div>
+            <a href="https://pay.kiwify.com.br/ml13JYJ" class="header-cta" target="_blank" rel="noopener noreferrer">
+                Comprar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="badge" aria-hidden="true">🚀 Novo v2.1</div>
+                <h1 id="hero-title">Corretor: <span>Pare de Perder Vendas</span> por Falta de Follow-up</h1>
+                <p>Sistema de emails automaticos que acompanha seus leads 24h por dia. Sem mensalidade. Usa seu proprio
+                    Gmail.</p>
+            </div>
+        </section>
+
+        <!-- Problem -->
+        <section class="problem" aria-labelledby="problem-title">
+            <div class="container">
+                <h2 id="problem-title">Voce ja passou por isso?</h2>
+                <ul class="problem-list">
+                    <li><span class="icon" aria-hidden="true">✕</span> Lead pediu informacao e voce esqueceu de
+                        responder</li>
+                    <li><span class="icon" aria-hidden="true">✕</span> Respondeu 3 dias depois e ele ja tinha comprado
+                        com outro</li>
+                    <li><span class="icon" aria-hidden="true">✕</span> Tem uma lista de leads mas nao sabe como
+                        acompanhar todos</li>
+                    <li><span class="icon" aria-hidden="true">✕</span> Ferramentas de email sao caras demais (R$
+                        100-500/mes)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="solution" aria-labelledby="solution-title">
+            <div class="container">
+                <h2 id="solution-title">A Solucao: <span>Funil Email Corretores</span></h2>
+                <div class="features">
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">📧</div>
+                        <div>
+                            <h3>7 Emails Prontos</h3>
+                            <p>Escritos por copywriter. Voce nao precisa escrever nada.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <div>
+                            <h3>100% Automatico</h3>
+                            <p>Configura uma vez, funciona pra sempre. Sem intervencao.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">💰</div>
+                        <div>
+                            <h3>R$ 0 de Mensalidade</h3>
+                            <p>Usa seu proprio Gmail. Sem custo mensal.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">🎂</div>
+                        <div>
+                            <h3>Emails Sazonais</h3>
+                            <p>Aniversario, Natal, Ano Novo, Pascoa... Tudo automatico.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <div>
+                            <h3>Dashboard Visual</h3>
+                            <p>Acompanhe tudo: enviados, pendentes, taxa de conversao.</p>
+                        </div>
+                    </article>
+                    <article class="feature">
+                        <div class="feature-icon" aria-hidden="true">🏠</div>
+                        <div>
+                            <h3>Oportunidade de Imovel</h3>
+                            <p>Divulgue um imovel para toda sua lista com 1 clique.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="how-it-works" aria-labelledby="how-title">
+            <div class="container">
+                <h2 id="how-title">Como Funciona</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-content">
+                            <h3>Voce adiciona o lead na planilha</h3>
+                            <p>Nome, email, telefone. Simples assim.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-content">
+                            <h3>O sistema envia emails automaticamente</h3>
+                            <p>7 emails estrategicos ao longo de 30 dias.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-content">
+                            <h3>Lead pronto te procura</h3>
+                            <p>Cada email tem seu nome, seu CRECI, seu WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <h2 id="pricing-title">Quanto Custa?</h2>
+                <p class="subtitle">Menos de 1% de uma comissao</p>
+
+                <div class="price-card">
+                    <div class="price-old"><del>De R$ 297</del></div>
+                    <div class="price-new"><span>R$</span><strong>147</strong></div>
+                    <div class="price-info">Pagamento unico • Acesso vitalicio</div>
+
+                    <ul class="benefits-list">
+                        <li><span class="icon" aria-hidden="true">✓</span> 7 emails profissionais prontos</li>
+                        <li><span class="icon" aria-hidden="true">✓</span> 6 emails sazonais (Natal, Aniversario...)
+                        </li>
+                        <li><span class="icon" aria-hidden="true">✓</span> Funcao "Oportunidade de Imovel"</li>
+                        <li><span class="icon" aria-hidden="true">✓</span> Dashboard com estatisticas</li>
+                        <li><span class="icon" aria-hidden="true">✓</span> Envio 100% automatico</li>
+                        <li><span class="icon" aria-hidden="true">✓</span> Tutorial em video</li>
+                        <li><span class="icon" aria-hidden="true">✓</span> Suporte por WhatsApp</li>
+                    </ul>
+
+                    <a href="https://pay.kiwify.com.br/ml13JYJ" class="cta-button" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Quero automatizar meu follow-up - abre pagina de pagamento">
+                        Quero Automatizar Meu Follow-up
+                    </a>
+
+                    <p class="guarantee">🔒 <strong>Garantia de 7 dias</strong> - Se nao gostar, devolvo seu dinheiro
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title">Perguntas Frequentes</h2>
+
+                <div class="faq-item">
+                    <h3>Preciso saber programar?</h3>
+                    <p>Nao! Voce so precisa copiar e colar. O tutorial em video mostra tudo passo a passo.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Funciona no celular?</h3>
+                    <p>A configuracao inicial e feita no computador. Depois, voce pode ver os leads pelo celular
+                        normalmente.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Quantos emails posso enviar por dia?</h3>
+                    <p>O Gmail permite 500 emails/dia. O sistema controla isso automaticamente.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Posso editar os emails?</h3>
+                    <p>Sim! Todos os emails ficam numa planilha editavel. Voce pode mudar o que quiser.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>E se eu nao gostar?</h3>
+                    <p>Voce tem 7 dias de garantia. Se nao funcionar pra voce, devolvo 100% do valor.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Funil Email Corretores v2.1 • <a href="https://chatgeniuns.com.br" target="_blank"
+                    rel="noopener noreferrer">ChatGeniuns</a></p>
+            <p style="margin-top: 10px;">Duvidas? <a href="https://wa.me/5562993824952" target="_blank"
+                    rel="noopener noreferrer">WhatsApp: (62) 99382-4952</a></p>
+        </div>
+    </footer>
+
+    <!-- Mobile Fixed CTA -->
+    <div class="mobile-cta">
+        <a href="https://pay.kiwify.com.br/ml13JYJ" class="cta-button" target="_blank" rel="noopener noreferrer"
+            aria-label="Quero automatizar agora - abre pagina de pagamento">
+            Quero Automatizar Agora
+        </a>
+    </div>
+
+</body>
+
+</html>
