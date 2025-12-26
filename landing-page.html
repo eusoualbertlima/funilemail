@@ -524,10 +524,12 @@
 
                 <div class="hero-graphic">
                   <picture>
+                    <!-- Prefer SVG (the original you sent) -->
+                    <source type="image/svg+xml" srcset="/assets/hero.svg">
                     <source type="image/webp" srcset="/assets/hero-360.webp 360w, /assets/hero-720.webp 720w, /assets/hero-1200.webp 1200w" sizes="(max-width:768px) 360px, (max-width:1200px) 720px, 1200px">
-                    <img src="/assets/hero-720.png" alt="Dashboard do Funil Email Corretores — visual de KPIs e CTA" class="hero-img" loading="lazy" width="1200" height="600">
+                    <img src="/assets/hero.svg" alt="Dashboard do Funil Email Corretores — visual de KPIs e CTA" class="hero-img" loading="eager" width="1200" height="600">
                   </picture>
-    </div>
+                </div>
 
     <p class="hero-sub">Sistema de emails automáticos que acompanha seus leads 24h por dia. Sem mensalidade. Usa seu próprio Gmail.</p>
 
