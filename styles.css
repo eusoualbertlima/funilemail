@@ -83,9 +83,15 @@ body {
   padding: 48px 0 24px;
 }
 
+/* Allow the hero to be wider on desktop so the headline has room */
+.hero .container {
+  max-width: 1100px;
+}
+
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  /* ensure the left column has a sensible minimum so large headlines can fit */
+  grid-template-columns: minmax(420px, 1fr) 440px;
   gap: 32px;
   align-items: center;
 }
@@ -103,9 +109,17 @@ body {
 }
 
 .hero-content h1 {
-  font-size: clamp(28px, 5.2vw, 44px);
+  font-size: clamp(30px, 4.6vw, 56px);
   font-weight: 900;
   margin-bottom: 12px;
+  line-height: 1.04;
+  word-break: normal;
+  hyphens: auto;
+  white-space: normal;
+}
+
+@media (min-width: 1400px) {
+  .hero-inner { grid-template-columns: 1fr 520px; }
 }
 
 .hero-content h1 span { color: var(--accent); }
